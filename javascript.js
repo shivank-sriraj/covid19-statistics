@@ -7,8 +7,8 @@ async function loadCountryData() {
     let fetchData = await fetchString.json();
     let fetchStringIn = await fetch("https://api.rootnet.in/covid19-in/stats/latest");
     let fetchDataIn = await fetchStringIn.json();
-    let countryArray = ["United States", "Brazil", "India", "Russia", "Peru", "South Africa", "Mexico", "Chile", "United Kingdom", "Iran"];
-    let countryIndex = [177, 23, 76, 138, 131, 154, 109, 34, 176, 78];
+    let countryArray = ["United States", "Brazil", "India", "Russia", "South Africa", "Peru", "Mexico", "Chile", "United Kingdom", "Iran"];
+    let countryIndex = [177, 23, 76, 138, 154, 131, 109, 34, 176, 78];
     let table = document.getElementById("country");
     for(let i=0; i<countryArray.length; i++) {
         let row = table.insertRow(i+1);
@@ -70,11 +70,11 @@ function refresh() {
 refresh();
 
 async function fetchCoronaGlobal() {
-    let fetchString = await fetch("https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats");
+    let fetchString = await fetch("https://api.covid19api.com/summary");
     let fetchData = await fetchString.json();
-    document.getElementById("globalConfirmedB").innerHTML = fetchData.data.total_cases;
-    document.getElementById("globalDeathsB").innerHTML = fetchData.data.death_cases;
-    document.getElementById("globalRecoveredB").innerHTML = fetchData.data.recovery_cases;
+    document.getElementById("globalConfirmedB").innerHTML = fetchData.Global.TotalConfirmed;
+    document.getElementById("globalDeathsB").innerHTML = fetchData.Global.TotalDeaths;
+    document.getElementById("globalRecoveredB").innerHTML = fetchData.Global.TotalRecovered;
 }
 async function fetchCoronaIndia() {
     let fetchString = await fetch("https://api.rootnet.in/covid19-in/stats/latest");
