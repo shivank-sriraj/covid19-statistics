@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Statistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="teal lighten-5">
+    <div class="container">
+        <img src="covid19-image.png" alt="" width="50%" height="auto">
+        <h2 class="red-text text-accent-3">COVID-19 Statistics</h1>
+        <div class="card-panel deep-purple lighten-2">
+            <h3 class="lime-text text-lighten-5">Global Cases</h3>
+            <p class="flow-text lime-text text-lighten-5">Total Confirmed: <span id="globalConfirmed" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Deaths: <span id="globalDeaths" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Recovered: <span id="globalRecovered" class="right"></span></p>
+            <button type="button" onclick="fetchCoronaGlobal()" class="waves-effect waves-light btn-small red accent-3">Check Now</button>
+        </div>
+        <ul class="collapsible black-text">
+            <li>
+                <div class="collapsible-header teal lighten-2 flow-text"><i class="material-icons">language</i>Top Ten Countries<span class="new badge" data-badge-caption="click here"></span></div>
+                <div class="collapsible-body yellow lighten-4">
+                  <table id="country">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Confirmed</th>
+                        <th>Deaths</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!--Rows inserted through JavaScript-->
+                    </tbody>
+                  </table>
+                </div>
+            </li>
+        </ul>
+        <div class="card-panel deep-purple lighten-2">
+            <h3 class="lime-text text-lighten-5">India Cases</h1>
+            <p class="flow-text lime-text text-lighten-5">Total Confirmed: <span id="indiaConfirmed" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Deaths: <span id="indiaDeaths" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Recovered: <span id="indiaRecovered" class="right"></span></p>
+            <button type="button" onclick="fetchCoronaIndia()" class="waves-effect waves-light btn-small red accent-3">Check Now</button>
+        </div>
+        <ul class="collapsible black-text">
+            <li>
+                <div class="collapsible-header teal lighten-2 flow-text"><i class="material-icons">whatshot</i>India: State Wise<span class="new badge" data-badge-caption="click here"></span></div>
+                <div class="collapsible-body yellow lighten-5">
+                    <table id="state">
+                        <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Confirmed</th>
+                              <th>Deaths</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!--Rows inserted through JavaScript-->
+                        </tbody>
+                      </table>
+                </div>
+            </li>
+        </ul>
+        <div class="card-panel deep-purple lighten-2">
+            <h3 class="lime-text text-lighten-5">Bihar Cases</h1>
+            <p class="flow-text lime-text text-lighten-5">Total Confirmed: <span id="biharConfirmed" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Deaths: <span id="biharDeaths" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Recovered: <span id="biharRecovered" class="right"></span></p>
+            <button type="button" onclick="fetchCoronaBihar()" class="waves-effect waves-light btn-small red accent-3" class="right">Check Now</button>
+        </div>
+        <ul class="collapsible black-text">
+            <li>
+                <div class="collapsible-header teal lighten-2 flow-text"><i class="material-icons">local_hospital</i>Bihar: District Wise<span class="new badge" data-badge-caption="click here"></span></div>
+                <div class="collapsible-body yellow lighten-4">
+                  <table id="district">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Confirmed</th>
+                        <th>Deaths</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!--Rows inserted through JavaScript-->
+                    </tbody>
+                  </table>
+                </div>
+            </li>
+        </ul>
+        <div class="card-panel deep-purple lighten-2">
+            <h3 class="lime-text text-lighten-5">Rohtas Cases</h1>
+            <p class="flow-text lime-text text-lighten-5">Total Confirmed: <span id="rohtasConfirmed" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Deaths: <span id="rohtasDeaths" class="right"></span></p>
+            <p class="flow-text lime-text text-lighten-5">Total Recovered: <span id="rohtasRecovered" class="right"></span></p>
+            <button type="button" onclick="fetchCoronaRohtas()" class="waves-effect waves-light btn-small red accent-3" class="right">Check Now</button>
+        </div>
+        <p>Made with Fetch API.</p>
+        <p>Developed by Shivank Sriraj.</p>
+        <hr>
+        <p><span id="time"></span></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
