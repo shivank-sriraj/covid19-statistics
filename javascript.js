@@ -10,8 +10,8 @@ async function refresh() {
     let fetchData = await fetchString.json();
     //Load Country Data Begins...
     {
-        let countryArray = ["United States", "Brazil", "India", "Russia", "South Africa", "Mexico", "Peru", "Chile", "United Kingdom", "Iran"];
-        let countryIndex = [177, 23, 76, 138, 154, 109, 131, 34, 176, 78];
+        let countryArray = ["United States", "Brazil", "India", "Russia", "South Africa", "Peru", "Mexico", "Colombia", "Chile", "Spain"];
+        let countryIndex = [177, 23, 76, 138, 154, 131, 109, 36, 34, 156];
         let table = document.getElementById("country");
         for(let i=0; i<countryArray.length; i++) {
             let row = table.insertRow(i+1);
@@ -42,12 +42,7 @@ async function refresh() {
             let cell3 = row.insertCell(2);
             cell1.innerHTML = stateArray[i];
             cell2.innerHTML = fetchData[stateIndex[i]].total.confirmed;
-            if (fetchData[stateIndex[i]].total.deceased == undefined) {
-                cell3.innerHTML = "N/A";
-            }
-            else {
-                cell3.innerHTML = fetchData[stateIndex[i]].total.deceased;
-            }
+            cell3.innerHTML = fetchData[stateIndex[i]].total.deceased;
         }
     }
     //Load State Data Ends...
