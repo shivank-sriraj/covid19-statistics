@@ -9,6 +9,7 @@ async function refresh() {
     let fetchString = await fetch("https://api.covid19india.org/v4/data.json");
     let fetchData = await fetchString.json();
     //Load Country Data Begins...
+/*
     {
         let countryArray = ["United States", "Brazil", "India", "Russia", "South Africa", "Peru", "Mexico", "Colombia", "Chile", "Spain"];
         let countryIndex = [177, 23, 76, 138, 154, 131, 109, 36, 34, 156];
@@ -29,6 +30,7 @@ async function refresh() {
             }
         }
     }
+*/
     //Load Country Data Ends...
     //Load State Data Begins...
     {
