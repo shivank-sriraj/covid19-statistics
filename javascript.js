@@ -4,8 +4,11 @@ function readTime() {
 }
 async function refresh() {
     setInterval(readTime, 1000);
-    let fetchStringG = await fetch("https://api.covid19api.com/summary");
-    let fetchDataG = await fetchStringG.json();
+    /*
+     let fetchStringG = await fetch("https://api.covid19api.com/summary");
+     let fetchDataG = await fetchStringG.json();
+    */
+    
     let fetchString = await fetch("https://api.covid19india.org/v4/data.json");
     let fetchData = await fetchString.json();
     //Load Country Data Begins...
