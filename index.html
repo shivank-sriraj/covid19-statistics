@@ -19,17 +19,16 @@
             <div class="separator"></div>
             <p class="welcome-message">Wanna share something without revealing your identity. Send it right below!</p>
 
-            <form class="login-form">
+            <form class="login-form" id="messageForm" action="https://formspree.io/f/mzzpbzve" method="POST">
                 <div class="form-control">
-                    <input type="text" placeholder="Name (Don't worry, the receiver will not see this">
-                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name">
+                    Don't worry, the receiver will not see this.                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-control">
-                    <input type="password" placeholder="Password">
-                    <i class="fas fa-lock"></i>
+                    <input type="text" placeholder="Secret Message">
                 </div>
 
-                <button class="submit">Login</button>
+                <button class="submit">Send</button>
             </form>
         </div>
     </section>
