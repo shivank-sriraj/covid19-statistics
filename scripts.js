@@ -12,7 +12,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
         }
     }).then(response => {
         if (response.ok) {
-            alert('Thank you for your message!');
+            alert('Yayy, you just sent a message anonymously!');
             form.reset();
         } else {
             response.json().then(data => {
