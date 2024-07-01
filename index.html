@@ -126,8 +126,11 @@
             width: 100%;
             padding: 40px;
             background-color: #bb0ff0;
-            color: #000;
+            color: #fff;
             text-align: center;
+        }
+        input, textarea{
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -136,11 +139,11 @@
         <h1>Leave an Anonymous Message !!!</h1>
         <p>Want to share a feedback, want to share your feelings, send it anonymously!!! :D</p>
         <form id="messageForm" action="https://formspree.io/f/mzzpbzve" method="POST">
-            <label for="name">Name: (Don't worry, the receiver will not see your name)</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+            <label for="name">Name: (Don't worry, the receiver will not see your name)</label><br><br>
+            <input type="text" id="name" name="name" required><br><br><br><br>
 
-            <label for="message">Anonymous Message: </label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <label for="message">Anonymous Message: </label><br>Mbr>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br><br><br>
 
             <button type="submit">Send</button>
         </form>
