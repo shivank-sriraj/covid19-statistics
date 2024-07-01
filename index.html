@@ -21,14 +21,14 @@
 
             <form class="login-form" id="messageForm" action="https://formspree.io/f/mzzpbzve" method="POST">
                 <div class="form-control">
-                    <input type="text" placeholder="Name">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
                     <p>Don't worry, the receiver will not get your name. </p>
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Secret Message">
+                    <input type="text" id="message" name="message" placeholder="Secret Message" required>
                 </div>
 
-                <button class="submit">Send</button>
+                <button class="submit" type="submit">Send</button>
             </form>
         </div>
     </section>
